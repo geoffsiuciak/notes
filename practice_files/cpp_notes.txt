@@ -1,0 +1,65 @@
+1. The C++ Standard
+	- Internationally agreed upon document
+	- Competing implementations
+	
+2. const
+	- One of the most important tools for clean code
+	- Access via const& or const* cannot modify
+	- Forces value initialization
+
+3. Deterministic Object Lifetime and Destruction
+	- Constructors/Destructor pairs (RAII) combined with scoped values
+	  removes need for "finally" or garbage collectiont
+
+4. Templates
+	- DRY
+	- Generated at compile time
+	- Highly efficient run-time code, can be faster
+	- Template system IS turing complete... not necessarily good
+
+5. Algorithms / STL
+	- set<>
+	- vector<>
+	- for_each
+	- any_of
+
+6. std::array 
+	- No dynamic allocation/size known at compile time 
+	- Negative cost abstraction
+	- Fixed-size, stack-based container (boost::array)
+
+7. List Initialization
+	- std::vector{1, 2, 3, 4}; - better than 4x or more push_back()
+
+8. Variadic Templates
+	- Any number of types
+
+9. constexpr
+	- Compile time generation of code/values
+	- Strict in 11, relaxed in 14
+
+10. Auto (11)
+	- Automatic deduction of value types
+	- Automatic memory management in pre-C99
+
+11. Return type deduction for normal functions (14)
+	- Allows for higher order function constructs
+
+12. Lambdas (11)
+	- Unnamed function objects
+	- May or may not have captures
+	- Not allowed to know the name of the type
+
+13. Generic / Variadic Lambdas (14)
+	- Bug fix for 11 (LOL)
+	- Create implicit template using "auto"
+
+14. Range-based for-loops (11)
+	- for (const auto data& : map)
+
+15. Structured bindings (17)
+	- Decompose struct/array into identifiers
+	- for (const auto &[key, value] : map)
+
+16. Concepts (20)
+	- 
